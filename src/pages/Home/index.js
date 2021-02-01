@@ -11,6 +11,7 @@ const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const OverviewBlock = lazy(() => import("../../components/OverviewBlock"));
+const NextStepsBlock = lazy(() => import("../../components/NextStepsBlock"));
 
 const Home = () => {
   return (
@@ -36,6 +37,7 @@ const Home = () => {
       />
       <OverviewBlock
       />
+      <NextStepsBlock/>
     </Container>
   );
 };
