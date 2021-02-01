@@ -38,6 +38,12 @@ export const Calculation = styled.p`
   text-align: left;
   font-weight: bold;
   line-height: 1.3em;
+  a:visited {
+    color: #2C72DB;
+  }
+  a:hover {
+    color: #448FFF;
+  }
 `;
 export const Container = styled.div`
   position: relative;

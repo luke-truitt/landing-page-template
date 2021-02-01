@@ -50,8 +50,14 @@ export const IOSButton = styled.a`
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   color: #2C72DB;
   font-size: 14pt;
+  :visited {
+    color: #2C72DB;
+  }
+  :hover {
+    color: #448FFF;
+  }
+  
 `;
-
 export const ContentWrapper = styled.div`
   max-width: 570px;
 

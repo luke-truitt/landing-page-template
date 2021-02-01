@@ -21,7 +21,7 @@ const ShortBlock = ({ title, content, t }) => {
               <S.Title>{t(title)}</S.Title>
               <S.Content>{t(content)}</S.Content>
               <Row type="flex" justify="center" align="middle">
-                <S.IOSButton>Start Now &rsaquo;</S.IOSButton>
+                <S.IOSButton href="whhhat">Start Now &rsaquo;</S.IOSButton>
               </Row>
             </Col>
           </S.ContentWrapper>

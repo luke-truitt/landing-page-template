@@ -24,8 +24,8 @@ const MiddleBlock = ({ title, content, subtext, t }) => {
                 <S.SubText>The first tax software designed for students. We maximize your refund, <u>and</u> make sure you understand it.</S.SubText>
               </Row>
               <Row type="flex" justify="center" align="middle">
-                <S.IOSButton>Learn More &rsaquo;</S.IOSButton>
-                <S.IOSButton>Apply &rsaquo;</S.IOSButton>
+                <S.IOSButton href="/hello">Learn More &rsaquo;</S.IOSButton>
+                <S.IOSButton href="/iced-out">Apply &rsaquo;</S.IOSButton>
               </Row>
               <Row type="flex" justify="center" align="middle">
                 <img src="/img/png/iphone_home.png" alt="get some money"/>

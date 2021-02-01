@@ -33,4 +33,10 @@ font-weight: bold;
   font-size: 30pt;
   width: 80%
 }
+a:visited {
+  color: #2C72DB;
+}
+a:hover {
+  color: #448FFF;
+}
 `;

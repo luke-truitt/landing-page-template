@@ -12,7 +12,7 @@ const NextStepsBlock = () => {
       <Fade left>
         <Col lg={48} md={48} sm={48} xs={48}>
         <Row type="flex" justify="center" align="middle">
-          <S.Title>Calculate your eligibility with Alan &rsaquo;</S.Title>
+          <S.Title><a href="/hello">Calculate your eligibility with Alan &rsaquo;</a></S.Title>
         </Row>
         </Col>
       </Fade>
