@@ -50,6 +50,9 @@ export const Extra = styled.section`
 export const LogoContainer = styled.div`
   display: flex;
   position: relative;
+  @media screen and (max-width: 712px) {
+    display: none;
+  }
 `;
 
 export const Select = styled.div`
@@ -108,10 +111,6 @@ export const FooterContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
-  @media screen and (max-width: 414px) {
-    padding: 2rem 0;
-    padding-right: 50%;
-  }
 
   div {
     cursor: pointer;

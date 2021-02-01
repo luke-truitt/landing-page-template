@@ -2,6 +2,7 @@ import { lazy } from "react";
 
 import NewIntroBlock from "../../content/NewIntroBlock.json";
 import ShortBlockContent from "../../content/ShortBlockContent.json";
+import OverviewContent from "../../content/OverviewContent.json";
 
 const ShortBlock = lazy(() => import("../../components/ShortBlock"));
 const ContactFrom = lazy(() => import("../../components/ContactForm"));
@@ -9,6 +10,7 @@ const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
+const OverviewBlock = lazy(() => import("../../components/OverviewBlock"));
 
 const Home = () => {
   return (
@@ -31,6 +33,8 @@ const Home = () => {
       <ShortBlock
         title={ShortBlockContent.title}
         content={ShortBlockContent.text}
+      />
+      <OverviewBlock
       />
     </Container>
   );

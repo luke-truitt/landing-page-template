@@ -18,13 +18,25 @@ export const Content = styled.p`
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 21pt;
   font-weight: 350;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: 712px) {
+    font-size: 15pt;
+    width: 80%
+  }
 `;
 export const Title = styled.h6`
   color: #FFFFFF;
   font-size: 45pt;
   line-height: 1;
   margin-bottom: 0.3em;
+  margin-left: auto;
+  margin-right: auto;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  @media screen and (max-width: 712px) {
+    font-size: 30pt;
+    width: 80%
+  }
 `;
 export const SubText = styled.p`
   color: #86868B;
@@ -32,6 +44,10 @@ export const SubText = styled.p`
   width: 85%;
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  @media screen and (max-width: 712px) {
+    font-size: 15pt;
+    width: 80%
+  }
 `;
 
 export const IOSButton = styled.a`

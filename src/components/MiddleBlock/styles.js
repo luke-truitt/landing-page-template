@@ -9,7 +9,7 @@ export const MiddleBlock = styled.section`
   justify-content: center;
   background-color: #C9D1DB;
   @media screen and (max-width: 768px) {
-    padding: 5.5rem 0 3rem;
+    padding: 5.5rem 0 0 0;
   }
 `;
 
@@ -18,6 +18,9 @@ export const Content = styled.p`
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 21pt;
   font-weight: 350;
+  @media screen and (max-width: 712px) {
+    font-size: 16pt;
+  }
 `;
 export const Title = styled.h6`
   color: #1D1D1F;
@@ -25,6 +28,9 @@ export const Title = styled.h6`
   font-weight: bold;
   font-size: 75pt;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  @media only screen and (max-width: 414px) {
+    font-size: 40pt;
+  }
 `;
 export const SubText = styled.p`
   color: #86868B;
@@ -32,6 +38,10 @@ export const SubText = styled.p`
   width: 85%;
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  @media screen and (max-width: 712px) {
+    font-size: 10pt;
+    width: 40%;
+  }
 `;
 
 export const IOSButton = styled.a`

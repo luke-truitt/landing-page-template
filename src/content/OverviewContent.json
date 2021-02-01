@@ -1,0 +1,12 @@
+{
+    "card_1_link": "url('/img/png/path_1.png')",
+    "card_2_link": "url('/img/png/path_2.png')",
+    "card_3_link": "url('/img/png/path_3.png')",
+    "card_4_link": "url('/img/png/path_4.png')",
+    "card_5_link": "url('/img/png/path_5.png')",
+    "card_1_text": "url('/img/png/path_1.png')",
+    "card_2_text": "url('/img/png/path_2.png')",
+    "card_3_text": "url('/img/png/path_3.png')",
+    "card_4_text": "url('/img/png/path_4.png')",
+    "card_5_text": "url('/img/png/path_5.png')"
+}
