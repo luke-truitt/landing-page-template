@@ -1,4 +1,4 @@
-import SvgIcon from "../../common/SvgIcon";
+import SvgIcon from "../SvgIcon";
 
 import * as S from "./styles";
 
