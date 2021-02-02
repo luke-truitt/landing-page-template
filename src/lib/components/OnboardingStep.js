@@ -2,15 +2,6 @@ import React, { useState } from "react";
 import { removeContainerElement } from "../utils/removeContainer";
 import ProgressBar from "@ramonak/react-progress-bar";
 
-<<<<<<< HEAD
-export const OnboardingStep = ({
-  step,
-  isActive,
-  displayNext,
-  goToNextStep,
-  displayFinish,
-}) => {
-=======
 export const OnboardingStep = ({ step, isActive, displayNext, goToPreviousStep, goToNextStep, displayFinish }) => {
 
   const keyDown = (e) => {
@@ -24,7 +15,6 @@ export const OnboardingStep = ({ step, isActive, displayNext, goToPreviousStep, 
     }
   }
 
->>>>>>> 8747ae8a89906e58ef2a3d6c989afc3912793a01
   const validateFields = () => {
     return !step.fields.reduce((valid, field) => {
       if (!field.validation) {
@@ -149,9 +139,9 @@ export const OnboardingStep = ({ step, isActive, displayNext, goToPreviousStep, 
                 value={form[field.name]}
               />
             </div>
-          ))}
+          )}
         </form>
-      )}
+      }
       {step.type === "multiselect" && (
         <div class="rop-multiselect-container">
           {step.options.map((option, index) => (
@@ -179,10 +169,5 @@ export const OnboardingStep = ({ step, isActive, displayNext, goToPreviousStep, 
         </button>
       </div>
     </div>
-<<<<<<< HEAD
   );
 };
-=======
-  )
-}
->>>>>>> 8747ae8a89906e58ef2a3d6c989afc3912793a01
