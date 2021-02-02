@@ -107,8 +107,8 @@ export const OnboardingStep = ({ step, isActive, displayNext, goToNextStep, disp
   return (
     
     <div className="rop-step">
-      <div style={{width: "50%",float: "left"}}>
-        <ProgressBar class="rop-progress" completed={step.progress}/>
+      <div style={{width: "25%", marginRight: "60%", marginTop: "40px", marginBottom: "40px"}}>
+        <ProgressBar completed={step.progress} bgcolor={"#000000AA"} labelSize={"0px"}/>
       </div>
       {step.title && <div className="rop-title">{step.title}</div>}
       {step.description && <div className="rop-description">{step.description}</div>}

@@ -21,7 +21,7 @@
   background-color:#36363677;
 }
 .rop-progress {
-  
+  margin-bottom: 100px;
 }
 .rop-step {
   width: calc(100% - 20px);
