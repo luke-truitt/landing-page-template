@@ -2,7 +2,18 @@ import React, { useState } from "react";
 import { removeContainerElement } from "../utils/removeContainer";
 import ProgressBar from "@ramonak/react-progress-bar";
 
-export const OnboardingStep = ({ step, isActive, displayNext, goToNextStep, displayFinish }) => {
+export const OnboardingStep = ({ step, isActive, displayNext, goToPreviousStep, goToNextStep, displayFinish }) => {
+
+  const keyDown = (e) => {
+    var code = e.keyCode || e.which;
+    if(code === 13 || code === 32 || code === 39) { //13 is the enter keycode
+      goToNextStep();
+    } else if (code === 37){
+      goToPreviousStep();
+    } else if (code === 27) {
+      removeContainerElement();
+    }
+  }
 
   const validateFields = () => {
     return !step.fields.reduce((valid, field) => {
@@ -106,7 +117,7 @@ export const OnboardingStep = ({ step, isActive, displayNext, goToNextStep, disp
 
   return (
     
-    <div className="rop-step">
+    <div className="rop-step" onKeyDown={keyDown} tabIndex="-1">
       <div style={{width: "25%", marginRight: "60%", marginTop: "40px", marginBottom: "40px"}}>
         <ProgressBar completed={step.progress} bgcolor={"#000000AA"} labelSize={"0px"}/>
       </div>
@@ -115,12 +126,13 @@ export const OnboardingStep = ({ step, isActive, displayNext, goToNextStep, disp
       {step.type === 'form' && <form className="rop-form">
         {
           step.fields.map((field, index) =>
-            <div className="rop-input-container" key={field.name + index}>
+            <div className="rop-input-container" onKeyDown={keyDown} key={field.name + index} >
               {field.label && <label className="rop-input-label" htmlFor={field.name}>{field.label}</label>}
               <input
                 className="rop-input"
                 type={field.type}
                 name={field.name}
+                autoFocus={field.first}
                 placeholder={field.placeholder}
                 onChange={updateForm}
                 value={form[field.name]}
