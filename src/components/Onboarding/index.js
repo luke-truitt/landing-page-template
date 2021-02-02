@@ -31,6 +31,7 @@ const OnboardingBlock = () => {
           progress: 0,
           title: 'Welcome to the platform',
           description: 'Navigate around the UI to start using it',
+          
         },
         {
           progress: 15,
