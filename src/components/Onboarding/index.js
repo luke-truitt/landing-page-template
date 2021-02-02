@@ -59,7 +59,8 @@ const OnboardingBlock = () => {
               type: "text",
               placeholder: "John",
               validation: "[a-zA-Z]",
-              value: "John",
+              value: "",
+              first: true,
             },
             {
               label: "Last Name",
@@ -67,7 +68,7 @@ const OnboardingBlock = () => {
               type: "text",
               placeholder: "Doe",
               validation: "",
-              value: "Doe",
+              value: "",
             },
           ],
           onSubmit: submitName,
