@@ -2,29 +2,26 @@ import React, { useState } from "react";
 import { removeContainerElement } from "../utils/removeContainer";
 import ProgressBar from "@ramonak/react-progress-bar";
 
-<<<<<<< HEAD
 export const OnboardingStep = ({
   step,
   isActive,
   displayNext,
+  goToPreviousStep,
   goToNextStep,
   displayFinish,
 }) => {
-=======
-export const OnboardingStep = ({ step, isActive, displayNext, goToPreviousStep, goToNextStep, displayFinish }) => {
-
   const keyDown = (e) => {
     var code = e.keyCode || e.which;
-    if(code === 13 || code === 32 || code === 39) { //13 is the enter keycode
+    if (code === 13 || code === 32 || code === 39) {
+      //13 is the enter keycode
       goToNextStep();
-    } else if (code === 37){
+    } else if (code === 37) {
       goToPreviousStep();
     } else if (code === 27) {
       removeContainerElement();
     }
-  }
+  };
 
->>>>>>> 8747ae8a89906e58ef2a3d6c989afc3912793a01
   const validateFields = () => {
     return !step.fields.reduce((valid, field) => {
       if (!field.validation) {
@@ -127,18 +124,38 @@ export const OnboardingStep = ({ step, isActive, displayNext, goToPreviousStep, 
   };
 
   return (
-    
     <div className="rop-step" onKeyDown={keyDown} tabIndex="-1">
-      <div style={{width: "25%", marginRight: "60%", marginTop: "40px", marginBottom: "40px"}}>
-        <ProgressBar completed={step.progress} bgcolor={"#000000AA"} labelSize={"0px"}/>
+      <div
+        style={{
+          width: "25%",
+          marginRight: "60%",
+          marginTop: "40px",
+          marginBottom: "40px",
+        }}
+      >
+        <ProgressBar
+          completed={step.progress}
+          bgcolor={"#000000AA"}
+          labelSize={"0px"}
+        />
       </div>
       {step.title && <div className="rop-title">{step.title}</div>}
-      {step.description && <div className="rop-description">{step.description}</div>}
-      {step.type === 'form' && <form className="rop-form">
-        {
-          step.fields.map((field, index) =>
-            <div className="rop-input-container" onKeyDown={keyDown} key={field.name + index} >
-              {field.label && <label className="rop-input-label" htmlFor={field.name}>{field.label}</label>}
+      {step.description && (
+        <div className="rop-description">{step.description}</div>
+      )}
+      {step.type === "form" && (
+        <form className="rop-form">
+          {step.fields.map((field, index) => (
+            <div
+              className="rop-input-container"
+              onKeyDown={keyDown}
+              key={field.name + index}
+            >
+              {field.label && (
+                <label className="rop-input-label" htmlFor={field.name}>
+                  {field.label}
+                </label>
+              )}
               <input
                 className="rop-input"
                 type={field.type}
@@ -179,10 +196,5 @@ export const OnboardingStep = ({ step, isActive, displayNext, goToPreviousStep, 
         </button>
       </div>
     </div>
-<<<<<<< HEAD
   );
 };
-=======
-  )
-}
->>>>>>> 8747ae8a89906e58ef2a3d6c989afc3912793a01
