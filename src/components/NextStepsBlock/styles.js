@@ -32,11 +32,18 @@ font-weight: bold;
 @media screen and (max-width: 712px) {
   font-size: 30pt;
   width: 80%
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+a {
+  color: #2C72DB;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 a:visited {
   color: #2C72DB;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 a:hover {
   color: #448FFF;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 `;

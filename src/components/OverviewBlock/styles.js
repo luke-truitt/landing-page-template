@@ -28,6 +28,7 @@ export const Content = styled.p`
   font-size: 10pt;
   width: 90%;
   line-height: 1.25em;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 `;
 export const Calculation = styled.p`
   margin-top: 4rem;
@@ -40,14 +41,22 @@ export const Calculation = styled.p`
   line-height: 1.3em;
   a:visited {
     color: #2C72DB;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   }
   a:hover {
     color: #448FFF;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   }
+  a {
+    color: #2C72DB;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 `;
 export const Container = styled.div`
   position: relative;
   max-width: 700px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 `;
 
 export const TextWrapper = styled.div`

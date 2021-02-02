@@ -12,6 +12,7 @@ const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const OverviewBlock = lazy(() => import("../../components/OverviewBlock"));
 const NextStepsBlock = lazy(() => import("../../components/NextStepsBlock"));
+const OnboardingBlock = lazy(() => import("../../components/Onboarding"));
 
 const Home = () => {
   return (
