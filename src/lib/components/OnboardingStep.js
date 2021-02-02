@@ -2,47 +2,53 @@ import React, { useState } from "react";
 import { removeContainerElement } from "../utils/removeContainer";
 import ProgressBar from "@ramonak/react-progress-bar";
 
-export const OnboardingStep = ({ step, isActive, displayNext, goToNextStep, displayFinish }) => {
-
+export const OnboardingStep = ({
+  step,
+  isActive,
+  displayNext,
+  goToNextStep,
+  displayFinish,
+}) => {
   const validateFields = () => {
     return !step.fields.reduce((valid, field) => {
       if (!field.validation) {
         return valid & true;
       }
-      return valid & RegExp(field.validation, 'gm').test(field.value);
-    }, true)
-  }
+      return valid & RegExp(field.validation, "gm").test(field.value);
+    }, true);
+  };
 
   let defaultButtonState = false,
     onSubmitCallback = () => {
       // This function will be replaced by a custom function
     };
-  if (step.type === 'form') {
+  if (step.type === "form") {
     defaultButtonState = step.fields.length === 0 ? false : validateFields();
-  } else if (step.type === 'component') {
+  } else if (step.type === "component") {
     defaultButtonState = true;
   }
 
   const [form, setForm] = useState(
-    Object.assign({},
+    Object.assign(
+      {},
       {
-        invalid: defaultButtonState
+        invalid: defaultButtonState,
       },
-      ...step.fields.map(field => ({ [field.name]: field.value || '' }))
+      ...step.fields.map((field) => ({ [field.name]: field.value || "" }))
     )
-  )
+  );
 
   if (!isActive) return null;
 
   let buttonText, buttonFunction;
   if (displayFinish) {
-    buttonText = 'Finish';
+    buttonText = "Finish";
     buttonFunction = removeContainerElement;
   } else if (displayNext) {
-    buttonText = 'Next';
+    buttonText = "Next";
     buttonFunction = goToNextStep;
   }
-  if (step.type === 'form' && step.onSubmit) {
+  if (step.type === "form" && step.onSubmit) {
     const defaultButtonFunction = buttonFunction;
     buttonFunction = () => {
       if (form.invalid) {
@@ -51,15 +57,15 @@ export const OnboardingStep = ({ step, isActive, displayNext, goToNextStep, disp
       const { invalid, ...formData } = form;
       step.onSubmit(formData);
       defaultButtonFunction();
-    }
-  } else if (step.type === 'component') {
+    };
+  } else if (step.type === "component") {
     const defaultButtonFunction = buttonFunction;
     buttonFunction = () => {
       if (onSubmitCallback) {
         onSubmitCallback();
       }
       defaultButtonFunction();
-    }
+    };
   }
 
   const validateForm = (name, value) => {
@@ -68,55 +74,71 @@ export const OnboardingStep = ({ step, isActive, displayNext, goToNextStep, disp
         return data & true;
       }
       if (field.name === name) {
-        return data & RegExp(field.validation, 'gm').test(value);
+        return data & RegExp(field.validation, "gm").test(value);
       }
-      return data & RegExp(field.validation, 'gm').test(form[field.name]);
+      return data & RegExp(field.validation, "gm").test(form[field.name]);
     }, true);
     // Valid
     return !validation;
-  }
+  };
 
   let updateForm;
-  if (step.type === 'form') {
+  if (step.type === "form") {
     updateForm = (event) => {
       const { name, value } = event.target;
       setForm({
         ...form,
         [name]: value,
-        invalid: validateForm(name, value)
-      })
-    }
+        invalid: validateForm(name, value),
+      });
+    };
   }
 
   const setButtonState = (state) => {
     setForm({
       ...form,
-      invalid: state
-    })
-  }
+      invalid: state,
+    });
+  };
 
   let CustomComponent = null;
-  if (step.type === 'component' && step.component) {
+  if (step.type === "component" && step.component) {
     CustomComponent = step.component;
   }
 
   const setOnSubmit = (onSubmit) => {
     onSubmitCallback = onSubmit;
-  }
+  };
 
   return (
-    
     <div className="rop-step">
-      <div style={{width: "25%", marginRight: "60%", marginTop: "40px", marginBottom: "40px"}}>
-        <ProgressBar completed={step.progress} bgcolor={"#000000AA"} labelSize={"0px"}/>
+      <div
+        style={{
+          width: "25%",
+          marginRight: "60%",
+          marginTop: "40px",
+          marginBottom: "40px",
+        }}
+      >
+        <ProgressBar
+          completed={step.progress}
+          bgcolor={"#000000AA"}
+          labelSize={"0px"}
+        />
       </div>
       {step.title && <div className="rop-title">{step.title}</div>}
-      {step.description && <div className="rop-description">{step.description}</div>}
-      {step.type === 'form' && <form className="rop-form">
-        {
-          step.fields.map((field, index) =>
+      {step.description && (
+        <div className="rop-description">{step.description}</div>
+      )}
+      {step.type === "form" && (
+        <form className="rop-form">
+          {step.fields.map((field, index) => (
             <div className="rop-input-container" key={field.name + index}>
-              {field.label && <label className="rop-input-label" htmlFor={field.name}>{field.label}</label>}
+              {field.label && (
+                <label className="rop-input-label" htmlFor={field.name}>
+                  {field.label}
+                </label>
+              )}
               <input
                 className="rop-input"
                 type={field.type}
@@ -126,17 +148,35 @@ export const OnboardingStep = ({ step, isActive, displayNext, goToNextStep, disp
                 value={form[field.name]}
               />
             </div>
-          )
-        }
-      </form>}
-      {CustomComponent && <CustomComponent
-        disable={form.invalid}
-        setButtonState={setButtonState}
-        setOnSubmit={setOnSubmit}
-        {...step.props} />}
+          ))}
+        </form>
+      )}
+      {step.type === "multiselect" && (
+        <div class="rop-multiselect-container">
+          {step.options.map((option, index) => (
+            <div className="rop-multiselect-button-container">
+              <button className="rop-multiselect-button">{option}</button>
+            </div>
+          ))}
+        </div>
+      )}
+      {CustomComponent && (
+        <CustomComponent
+          disable={form.invalid}
+          setButtonState={setButtonState}
+          setOnSubmit={setOnSubmit}
+          {...step.props}
+        />
+      )}
       <div className="rop-button-container">
-        <button className="rop-button" onClick={buttonFunction} disabled={form.invalid}>{buttonText}</button>
+        <button
+          className="rop-button"
+          onClick={buttonFunction}
+          disabled={form.invalid}
+        >
+          {buttonText}
+        </button>
       </div>
     </div>
-  )
-}
+  );
+};

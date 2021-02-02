@@ -18,34 +18,37 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   transition: 200ms ease-in-out all;
-  background-color:#36363677;
+  background-color: #36363677;
 }
 .rop-progress {
   margin-bottom: 100px;
 }
 .rop-step {
   width: calc(100% - 20px);
-  max-width: 800px;
+  max-width: 60vw;
   margin: 20px;
-  min-height: 300px;
-  border-radius: 10px;
+  min-height: 60vw;
   box-shadow: 0 20px 75px rgba(0, 0, 0, 0.13);
   padding: 20px 20px 55px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   position: relative;
-  background-color: white;
+  background-color: #f0f0f0;
 }
 .rop-title {
   font-weight: bold;
-  font-size: 1.2rem;
-  text-align: center;
-  line-height: 2.5rem;
+  font-size: 3.2rem;
+  line-height: 120%;
+  text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #2d2d2d;
 }
 .rop-description {
-  text-align: center;
+  text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #2d2d2d;
 }
 .rop-button-container {
   text-align: right;
@@ -54,16 +57,17 @@
   bottom: 20px;
 }
 .rop-button {
-  padding: 8px 24px;
+  padding: 4px 24px;
   font-size: 14px;
   border-radius: 5px;
-  background-color: #363636;
+  background-image: linear-gradient(#2796e4, #006ac1);
   color: white;
-  border: none;
+  border: 2px solid #006cc0;
   cursor: pointer;
-  letter-spacing: 1px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
-.rop-button:hover, .rop-button:focus {
+.rop-button:hover,
+.rop-button:focus {
   background-color: black;
   outline: none;
 }
@@ -94,10 +98,10 @@
   padding: 2px 5px;
   letter-spacing: 1px;
   border-radius: 5px;
-  border: 2px solid #EEE;
+  border: 2px solid #eee;
 }
 .rop-form .rop-input:focus {
-  border-color: #DDD;
+  border-color: #ddd;
   outline: none;
 }
 
@@ -105,4 +109,40 @@
   .react-onboarding-pro-container {
     align-items: flex-end;
   }
+}
+.rop-multiselect-container {
+  width: 100%;
+  height: 20vh;
+  align-items: left;
+  overflow-y: scroll;
+  margin: 20px;
+  padding-right: 20px;
+}
+.rop-multiselect-button-container {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.rop-multiselect-button {
+  width: 60%;
+  height: 6vh;
+  background-color: white;
+  border: 1px solid #d0d0d0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: left;
+  padding: 10px;
+  color: #7f7f7f;
+  border-radius: 5px;
+}
+
+.rop-multiselect-container::-webkit-scrollbar {
+  width: 10px;
+}
+.rop-multiselect-container::-webkit-scrollbar-track {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.rop-multiselect-container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #d0d0d0;
 }
