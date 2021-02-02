@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { removeContainerElement } from "../utils/removeContainer";
+import ProgressBar from "@ramonak/react-progress-bar";
 
 export const OnboardingStep = ({ step, isActive, displayNext, goToNextStep, displayFinish }) => {
 
@@ -104,7 +105,11 @@ export const OnboardingStep = ({ step, isActive, displayNext, goToNextStep, disp
   }
 
   return (
+    
     <div className="rop-step">
+      <div style={{width: "50%",float: "left"}}>
+        <ProgressBar class="rop-progress" completed={step.progress}/>
+      </div>
       {step.title && <div className="rop-title">{step.title}</div>}
       {step.description && <div className="rop-description">{step.description}</div>}
       {step.type === 'form' && <form className="rop-form">

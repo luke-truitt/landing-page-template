@@ -15,9 +15,13 @@
   align-items: center;
 }
 .react-onboarding-pro-blur-background {
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   transition: 200ms ease-in-out all;
+  background-color:#36363677;
+}
+.rop-progress {
+  
 }
 .rop-step {
   width: calc(100% - 20px);

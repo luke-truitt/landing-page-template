@@ -28,14 +28,17 @@ const OnboardingBlock = () => {
     const config = {
       steps: [
         {
+          progress: 0,
           title: 'Welcome to the platform',
           description: 'Navigate around the UI to start using it',
         },
         {
+          progress: 15,
           title: 'Add your profile details',
           description: 'We use this information in order to tailor your experience',
         },
         {
+          progress: 30,
           title: 'Who are you?',
           description: 'Help the community identify you',
           type: 'form',
@@ -60,6 +63,7 @@ const OnboardingBlock = () => {
           onSubmit: submitName
         },
         {
+          progress: 59,
           type: 'component',
           component: CustomComponent,
           props: {
@@ -67,7 +71,7 @@ const OnboardingBlock = () => {
           }
         }
       ],
-      overlayClose: false
+      overlayClose: true
     };
     Onboarding(config);
   }
