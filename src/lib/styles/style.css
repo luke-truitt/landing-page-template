@@ -110,7 +110,7 @@
     align-items: flex-end;
   }
 }
-.rop-multiselect-container {
+.rop-singleselect-container {
   width: 100%;
   height: 20vh;
   align-items: left;
@@ -118,11 +118,11 @@
   margin: 20px;
   padding-right: 20px;
 }
-.rop-multiselect-button-container {
+.rop-singleselect-button-container {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.rop-multiselect-button {
+.rop-singleselect-button {
   width: 60%;
   height: 6vh;
   background-color: white;
@@ -134,15 +134,15 @@
   border-radius: 5px;
 }
 
-.rop-multiselect-container::-webkit-scrollbar {
+.rop-singleselect-container::-webkit-scrollbar {
   width: 10px;
 }
-.rop-multiselect-container::-webkit-scrollbar-track {
+.rop-singleselect-container::-webkit-scrollbar-track {
   background-color: white;
   border-radius: 10px;
 }
 
-.rop-multiselect-container::-webkit-scrollbar-thumb {
+.rop-singleselect-container::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: #d0d0d0;
 }
