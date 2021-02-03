@@ -39,7 +39,6 @@ const Home = () => {
       <OverviewBlock
       />
       <NextStepsBlock/>
-      <OnboardingBlock/>
     </Container>
   );
 };

@@ -2,48 +2,53 @@ import styled from 'styled-components';
 
 export const NextStepsBlock = styled.section`
   position: relative;
+  padding: 7.5rem 0 3rem;
+  text-align: center;
   display: flex;
-  width:100%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #FFFFFF;
-  hieght: 100%;
   justify-content: center;
+  background-color: #000000;
+  @media screen and (max-width: 768px) {
+    padding: 5.5rem 0 3rem;
+  }
 `;
 
-export const Background = styled.div`
-background-image: url('/img/png/background.png');
-height: 400px;
-width: 100%;
-@media screen and (max-width: 768px) {
-  background-image: url('/img/png/lower_3.png');
-  width: 270px;
-}
+export const Content = styled.p`
+  color: #FFFFFF;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 21pt;
+  font-weight: 350;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: 712px) {
+    font-size: 15pt;
+    width: 80%
+  }
 `;
-export const Title = styled.h6`
-font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-font-size: 40pt;
-margin-left: auto;
-color: #2C72DB;
-margin-right: auto;
-margin-top: 25%;
-width: 400px;
-font-weight: bold;
-@media screen and (max-width: 712px) {
-  font-size: 30pt;
-  width: 80%
+
+export const Title = styled.div`
+  color: #FFFFFF;
+  font-size: 45pt;
+  line-height: 1.3;
+  margin-top: auto;
+  margin-bottom: 3.5rem;
+  margin-left: auto;
+  margin-right: auto;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
-a {
-  color: #2C72DB;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
-a:visited {
-  color: #2C72DB;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
-a:hover {
-  color: #448FFF;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-}
+  a {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #FFFFFF;
+  }
+  @media screen and (max-width: 712px) {
+    font-size: 25pt;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+`;
+
+export const ContentWrapper = styled.div`
+  max-width: 768px;
+
+  @media only screen and (max-width: 768px) {
+    max-width: 100%;
+  }
 `;

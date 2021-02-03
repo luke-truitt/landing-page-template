@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { lazy, useEffect } from "react";
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
@@ -6,6 +6,19 @@ import Onboarding from "../../lib";
 import * as S from "./styles";
 
 const MiddleBlock = ({ title, content, subtext, t }) => {
+  
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.id = "typef_orm_share"
+    script.src = "https://embed.typeform.com/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+  
+    return () => {
+      document.body.removeChild(script);
+    }
+  }, []);
+  
   const scrollTo = () => {
     const element = document.getElementById("overview");
     element.scrollIntoView({
@@ -13,77 +26,7 @@ const MiddleBlock = ({ title, content, subtext, t }) => {
     });
     
   };
-  const showOnboarding = () => {
-    const submitName = (formData) => {
-      console.log('Name details submitted.')
-      console.log(formData);
-    }
-    const config = {
-      steps: [
-        {
-          title: 'Add your details',
-          description: 'We use this information in order to estimate your rebate.',
-        },
-        {
-          title: 'Who are you?',
-          description: 'Just for us, don\'t worry we won\'t share:)',
-          type: 'form',
-          fields: [
-            {
-              label: 'First Name',
-              name: 'first_name',
-              type: 'text',
-              placeholder: 'First',
-              validation: '[a-zA-Z]',
-              value: ''
-            },
-            {
-              label: 'Last Name',
-              name: 'last_name',
-              type: 'text',
-              placeholder: 'Last',
-              validation: '',
-              value: ''
-            },
-          ],
-          onSubmit: submitName
-        },
-        {
-          title: 'Who are you?',
-          description: 'Just for us, don\'t worry we won\'t share:)',
-          type: 'form',
-          fields: [
-            {
-              label: 'Estimated Income Last Year',
-              name: 'estimated_income',
-              type: 'number',
-              placeholder: '10000',
-              value: ''
-            },
-            {
-              label: 'Estimated Refund Last Year',
-              name: 'refund',
-              type: 'number',
-              placeholder: '1000',
-              validation: '',
-              value: ''
-            },
-            {
-              label: 'Refunds Galore',
-              name: 'galore',
-              type: 'text',
-              placeholder: 'No Way!',
-              validation: '',
-              value: ''
-            },
-          ],
-          onSubmit: submitName
-        }
-      ],
-      overlayClose: false
-    };
-    Onboarding(config);
-  }
+  
   return (
     <S.MiddleBlock>
       <Row type="flex" justify="center" align="middle">
@@ -97,16 +40,19 @@ const MiddleBlock = ({ title, content, subtext, t }) => {
               </Row>
               <Row type="flex" justify="center" align="middle">
                 <S.IOSButton onClick={scrollTo}>Learn More &rsaquo;</S.IOSButton>
-                <S.IOSButton onClick={showOnboarding}>Apply &rsaquo;</S.IOSButton>
+                <S.IOSWrapper><a className="typeform-share link" href="https://form.typeform.com/to/HlbWvge2?typeform-medium=embed-snippet" style={{width: "20%",
+  textAlign: "center",
+  fontFamily: "-apple-system, BlinkMacSystemFont, sans-serif", color: "#2C72DB",
+  fontSize: "14pt"}} data-mode="popup" data-size="50" data-open="exit" data-open-value="50" target="_blank">Apply &rsaquo;</a></S.IOSWrapper>
               </Row>
               <Row type="flex" justify="center" align="middle">
-                <img src="/img/png/iphone_home.png" alt="get some money"/>
+                <S.Image><img src='/img/svg/iphone_home.svg'></img></S.Image>
               </Row>
             </Col>
           </S.ContentWrapper>
         </Fade>
       </Row>
-    </S.MiddleBlock>
+      </S.MiddleBlock>
   );
 };
 

@@ -63,7 +63,19 @@ export const IOSButton = styled.a`
     color: #448FFF;
   }
 `;
-
+export const IOSWrapper = styled.div`
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #2C72DB;
+  font-size: 14pt;
+  a:visited {
+    color: #2C72DB;
+  }
+  a:hover {
+    color: #448FFF;
+  }
+  
+`;
 export const ContentWrapper = styled.div`
   max-width: 570px;
 

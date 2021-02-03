@@ -39,21 +39,7 @@ const Footer = ({ t }) => {
               align="middle"
               style={{ padding: "3rem" }}
             >
-              <S.NavLink to="/">
-                <S.LogoContainer>
-                  <SvgIcon
-                    src="logo.svg"
-                    aria-label="homepage"
-                    width="101px"
-                    height="64px"
-                  />
-                </S.LogoContainer>
-              </S.NavLink>
               <S.FooterContainer>
-                <SocialLink
-                  href="https://github.com/Adrinlol/create-react-app-adrinlol"
-                  src="github.svg"
-                />
                 <SocialLink
                   href="https://twitter.com/Adrinlolx"
                   src="twitter.svg"

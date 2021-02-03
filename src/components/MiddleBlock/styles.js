@@ -40,10 +40,14 @@ export const SubText = styled.p`
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   @media screen and (max-width: 712px) {
     font-size: 10pt;
-    width: 40%;
+    width: 80%;
   }
 `;
-
+export const Image = styled.div`
+@media screen and (max-width: 712px) {
+  display: none;
+}
+`;
 export const IOSButton = styled.a`
   width: 20%;
   text-align: center;
@@ -56,11 +60,40 @@ export const IOSButton = styled.a`
   :hover {
     color: #448FFF;
   }
-  
+  @media screen and (max-width: 712px) {
+    width: 40%;
+    margin-bottom: 3rem;
+  }
+`;
+export const IOSWrapper = styled.div`
+  width: 20%;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #2C72DB;
+  font-size: 14pt;
+  a:visited {
+    color: #2C72DB;
+  }
+  a:hover {
+    color: #448FFF;
+  }
+  @media screen and (max-width: 712px) {
+    width: 40%;
+    margin-bottom: 3rem;
+  }
 `;
 export const ContentWrapper = styled.div`
   max-width: 570px;
 
+  @media only screen and (max-width: 768px) {
+    max-width: 100%;
+  }
+`;
+
+export const Iphone = styled.div`
+  background-image: url('/img/svg/path_5.svg');
+  width: 800px;
+  hieght: 800px;
   @media only screen and (max-width: 768px) {
     max-width: 100%;
   }
