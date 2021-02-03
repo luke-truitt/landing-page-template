@@ -2,8 +2,14 @@ import React, { useState } from "react";
 import { removeContainerElement } from "../utils/removeContainer";
 import ProgressBar from "@ramonak/react-progress-bar";
 
-export const OnboardingStep = ({ step, isActive, displayNext, goToPreviousStep, goToNextStep, displayFinish }) => {
-
+export const OnboardingStep = ({
+  step,
+  isActive,
+  displayNext,
+  goToPreviousStep,
+  goToNextStep,
+  displayFinish,
+}) => {
   const keyDown = (e) => {
     var code = e.keyCode || e.which;
     if (code === 13 || code === 32 || code === 39) {
@@ -163,11 +169,11 @@ export const OnboardingStep = ({ step, isActive, displayNext, goToPreviousStep, 
           ))}
         </form>
       )}
-      {step.type === "multiselect" && (
-        <div class="rop-multiselect-container">
+      {step.type === "singleselect" && (
+        <div class="rop-singleselect-container">
           {step.options.map((option, index) => (
-            <div className="rop-multiselect-button-container">
-              <button className="rop-multiselect-button">{option}</button>
+            <div className="rop-singleselect-button-container">
+              <button className="rop-singleselect-button">{option}</button>
             </div>
           ))}
         </div>

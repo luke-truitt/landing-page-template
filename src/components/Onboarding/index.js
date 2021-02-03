@@ -31,9 +31,48 @@ const OnboardingBlock = () => {
     const config = {
       steps: [
         {
+          progress: 30,
+          title: "Who are you?",
+          type: "form",
+          fields: [
+            {
+              label: "First Name",
+              name: "first_name",
+              type: "text",
+              placeholder: "Ben",
+              validation: "[a-zA-Z]",
+              value: "",
+              first: true,
+            },
+            {
+              label: "Last Name",
+              name: "last_name",
+              type: "text",
+              placeholder: "Franklin",
+              validation: "",
+              value: "",
+            },
+            {
+              label: "Email",
+              name: "email",
+              type: "email",
+              placeholder: "ben@ucla.edu",
+              value: "",
+            },
+            {
+              label: "Phone Number",
+              name: "phone_number",
+              type: "number",
+              placeholder: "88888888",
+              value: "",
+            },
+          ],
+          onSubmit: submitName,
+        },
+        {
           progress: 0,
           title: "How did you file taxes last year?",
-          type: "multiselect",
+          type: "singleselect",
           options: [
             "I didn't file taxes.",
             "My parents did it.",

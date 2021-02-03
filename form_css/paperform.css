@@ -1,0 +1,447 @@
+
+          html {
+            background-color: rgba(240, 240, 240, 1);
+          }
+
+          .editor--confirmation {
+            background-color: rgba(240, 240, 240, 1); 
+          }
+
+           .BtnV2:not(.BtnV2--solid) {
+            color: rgba(127, 127, 127, 1);
+            border-color: rgba(127, 127, 127, 0.2);
+          } 
+           .BtnV2:hover {
+            
+            box-shadow: 0 4px 15px -5px rgba(127, 127, 127, 0.2);
+          }
+
+           .BtnV2.BtnV2--solid {
+            background-color: rgba(127, 127, 127, 1);
+          }
+            .BtnV2.BtnV2--solid:active:not(.BtnV2--nofocus),  .BtnV2.BtnV2--solid.BtnV2--disabled:not(.BtnV2--nofocus) {
+            background-color: rgba(127, 127, 127, 1) !important;
+          }
+
+          
+            .Theme__backgroundImageContainer {
+              position: fixed;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              user-action: none;
+              pointer-events: none;
+              overflow: hidden;
+            }
+            
+            .Theme__editorPreviewWrapper {
+              position: relative;
+            }
+            
+            .Theme__editorPreview {
+              position: relative;
+            }
+            
+            .Theme__editorPreviewWrapper .Theme__backgroundImageContainer {
+              position: absolute;
+            }
+            
+            .Theme__backgroundImageWrapper {
+              position: relative;
+              height: 100%;
+              width: 100%;
+            }
+             
+             .Theme__backgroundVideo {
+                object-fit: cover;
+                width: 100vw;
+                height: 100vh;
+                
+             }
+             
+             .Theme__backgroundVideo--cover {
+                width: max(100vw, 178vh);
+                height: max(100vh, 56vw);
+                position: relative;
+                top: calc(50vh - max(28vw , 50vh));
+                left: calc(50vw - max(89vh, 50vw));
+             }
+             
+             .Theme__backgroundVideoOverlay {
+              object-fit: cover;
+              height: 100%;
+              width: 100%;
+              background-size: cover;
+              background-position: center;
+              background-color: undefined;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+            }
+            
+            .Theme__backgroundImage {
+              object-fit: cover;
+              height: 100%;
+              width: 100%;
+              
+              background-size: cover;
+              background-position: center;
+              background-image: none;
+            }
+            
+
+
+
+           .__header-one {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+font-size: 42px;
+line-height: 55px;
+font-weight: 400 !important;
+color: rgba(45, 45, 45, 1);
+  }
+           .__header-two {
+    font-family:  -apple-system, BlinkMacSystemFont, sans-serif;
+font-size: 26px;
+line-height: 35px;
+font-weight: 400 !important;
+color: rgba(45, 45, 45, 1);
+  }
+           .__unstyled,  .public-DraftStyleDefault-ul,  .public-DraftStyleDefault-ol {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+font-size: 18px;
+line-height: 25px;
+font-weight: 400 !important;
+color: rgba(45, 45, 45, 1);
+  }
+          
+           .Field__header,  .LiveField__header, .LiveSummary__question, th.LiveSummary__question,  .Scale__checkbox-label-text {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+line-height: 25px;
+font-weight: 400 !important;
+color: rgba(45, 45, 45, 1);
+  }
+           .LiveField__description,  .Field__hinttext, .LiveSummary__answer, td.LiveSummary__answer {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+font-size: 14px;
+line-height: 20px;
+font-weight: 400 !important;
+color: rgba(45, 45, 45, 1);
+  }
+
+          .ProgressIndicator {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+font-weight: 400 !important;
+  };
+          }
+
+          
+          .LiveField--submiterror .LiveField__header span {
+             border-bottom: 1px solid #ffa3a3;
+          }
+
+          
+          .LiveField--required .LiveField__header [data-block]:last-child > [data-offset-key]:last-child >:last-child [data-text]::after,
+          .Field--required  .Field__headerlabel [data-block]:last-child > [data-offset-key]:last-child >:last-child [data-text]::after
+           {
+            content: "*";
+          }
+
+           .Scale__track {
+            background: rgba(45, 45, 45, 0.2);
+          }
+
+           .Scale__checkbox-container {
+            border-color: rgba(45, 45, 45, 0.3);
+          }
+
+           .Scale__checkbox-container--checked {
+              border: 1px solid var(--active-color);
+          }
+           .Scale__checkbox-label-text {
+            font-size: 13px;
+          }
+           .Scale__checkbox-label-text--checked {
+            color: var(--active-color);
+          }
+
+           .Select--multi .Select-value {
+              background-color: var(--active-color-darkish);
+          }
+
+          .editor--live .Coupon__discountMessage {
+            font-family:  -apple-system, BlinkMacSystemFont, sans-serif;
+            color: rgba(45, 45, 45, 1);
+          }
+
+          .Address__input {
+            color: rgba(45, 45, 45, 1);
+          }
+
+          
+
+          .rc-slider-mark-text, .rc-slider-mark-text-active {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            font-weight: 400;
+            color: rgba(45, 45, 45, 1);
+          }
+
+           .File__percentage {
+            background-color: rgba(127, 127, 127, 1);
+          }
+
+        
+          .FullScreenPreview img.FullScreenPreview__option.FullScreenPreview__option--selected {
+            border-color: rgba(127, 127, 127, 1);
+          }
+
+           .SuccessfulSubmission .__header-one,  .SuccessfulSubmission .__header-two,  .SuccessfulSubmission .__unstyled {
+            color: rgba(45, 45, 45, 1);
+          }
+        
+
+          .SuccessfulSubmission {
+            font-family:  -apple-system, BlinkMacSystemFont, sans-serif;
+            color: rgba(45, 45, 45, 1);
+          }
+
+
+           .LiveField__answer,  .LiveField__required::before, .Link a, .Link, a.Link, .Address__input input, .Address__input select {
+            color: rgba(127, 127, 127, 1);
+          }
+          .rc-slider-track {
+            background-color: rgb(165, 165, 165);
+          }
+          .rc-slider-handle {
+            background-color: rgba(127, 127, 127, 1);
+            border-color: rgba(127, 127, 127, 1);
+          } 
+
+          .rc-slider-dot-active {
+           background-color: rgb(165, 165, 165);
+            border-color: rgb(165, 165, 165);
+          }
+
+          .rc-slider-handle:hover {
+           background-color: rgb(102, 102, 102);
+            border-color: rgb(102, 102, 102);
+            box-shadow: 0 2px 4px -3px rgba(0,0,0,.4);
+          }
+           .LiveField__input:not(.LiveField__input--manualfocus),   textarea.LiveField__input[rows="1"],  .LiveField__input--manualfocus:not(:focus) {
+            border-bottom: 1px solid rgba(230,230,230,.8);
+          }
+           .LiveField--active .LiveField__input:not(.LiveField__input--manualfocus),  .LiveField--active textarea.LiveField__input[rows="1"],  .LiveField__input--manualfocus:focus,  .StripeCheckout__CardWrapper .StripeElement.StripeElement--focus {
+            border-bottom: 1px solid rgba(127, 127, 127, 1);
+          }
+
+           .Checkout .LiveField__input,  .CheckoutV2 .LiveField__input {
+              color: rgba(127, 127, 127, 1);
+          }
+
+          .Checkout__stripeSourceList li {
+            border-color: rgba(127, 127, 127, 0.4);
+          }
+
+          .Checkout__stripeSourceList i.material-icons {
+            color: rgba(127, 127, 127, 0.9);
+          }
+
+          .Checkout__stripeSourceList li:hover {
+            border-color: rgba(127, 127, 127, 1);
+          }
+
+
+          .CheckoutV2 .Coupon input {
+            color: rgba(127, 127, 127, 1);
+          }
+          .CheckoutV2 .Coupon input:focus {
+            border-color: rgba(127, 127, 127, 0.7);
+            box-shadow: 0 3px 8px -2px rgba(127, 127, 127, 0.3);
+          }
+
+          .sq-input.sq-input--focus {
+            border-color: rgba(127, 127, 127, 1);
+          }
+
+           .Checkout .LiveField--active .LiveField__input:not(.LiveField__input--manualfocus),  .Checkout .LiveField__input--manualfocus:focus {
+            border-bottom: 1px solid rgba(127, 127, 127, 1);
+          }
+
+           .submit .btn-raised.btn-primary {
+            background-color: rgba(0, 106, 193, 1);
+            color: #FFF;
+            font-family:  -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 16px;
+            
+            font-weight: 400 !important;
+            
+          }
+
+          .GuidedModeInstructions__advance-text {
+            color: rgba(45, 45, 45, 1);
+          }
+
+           .btn-raised.btn-primary {
+            background-color: rgba(127, 127, 127, 1);
+            color: #FFF
+          }
+
+           .btn-raised.btn-inverted {
+            color: rgba(127, 127, 127, 1);
+            background-color: #FFF
+          }
+
+          .Pagination__progresstrack {
+            background-color: rgba(127, 127, 127, 1);
+          }
+
+
+           .btn.btn-primary {
+            color: rgba(127, 127, 127, 1);
+          }
+
+           .Pagination .btn-raised {
+            background-color: rgba(127, 127, 127, 1);
+            color: ;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+font-size: 16px;
+line-height: 25px;
+font-weight: 400 !important;
+          }
+
+          .
+
+           .Pagination .btn-raised.btn-primary {
+             background-color: rgba(127, 127, 127, 1);
+          }
+
+           .Pagination .btn-raised.btn-inverted {
+            color: rgba(127, 127, 127, 1);
+            background-color: #FFF;
+          }
+
+          .Pagination__btn.Pagination__btn--next::before {
+            color: rgba(127, 127, 127, 1);
+          }
+        
+          .wf-active .__header-one,
+          .wf-inactive .__header-one,
+          .wf-active .__header-two,
+          .wf-inactive .__header-two,
+          .wf-active .__unstyled,
+          .wf-inactive .__unstyled,
+          .wf-active .public-DraftStyleDefault-ul,
+          .wf-inactive .public-DraftStyleDefault-ul,
+          .wf-active .public-DraftStyleDefault-ol,
+          .wf-inactive .public-DraftStyleDefault-ol {
+            visibility: visible;
+          }
+
+          .LiveField__error {
+             background-color: #ffa3a3;
+          }
+          .Calculations__error {
+            color: #ffa3a3;
+          }
+
+        
+             .Field__header,  .Field,  .LiveField__header,  .LiveField, .SuccessfulSubmission {
+              background-color: transparent;
+              border: 0;
+              box-shadow: none !important;
+            }
+
+            .Appointment__time-picker .BtnV2.Appointment__time-button {
+              border-radius: 0;  
+            }
+
+            .LiveField__GuidedFieldModeHelp {
+              padding: 0;
+              background-color: transparent;
+              opacity: 1;
+              margin-top: -20px;
+            }
+
+            @media all and (min-width: 500px) {
+              .LiveFieldSection__row .LiveField:first-child {
+                padding-right: 8px;
+              }
+
+              .LiveFieldSection__row .LiveField:last-child {
+                padding-left: 8px;
+              }
+
+              .LiveFieldSection__row--1 .LiveField:first-child {
+                padding-right: 0;
+              }
+              .LiveFieldSection__row--1 .LiveField:last-child {
+                padding-left: 0;
+              }
+            }
+            .Address__form {
+              margin-left: 0;
+              margin-right: 0;
+            }
+            
+            .Product__images {
+              margin-left: 0;
+              margin-right: 0;
+              max-width: 100%;
+            }
+
+            .SuccessfulSubmission {
+              margin: 0;
+              padding: 0;
+            }
+
+             .LiveField .LiveField__container {
+              padding: 22px 0;
+            }
+            
+            @media all and (min-width:1px) and (max-width: 610px) {
+                .__standardMode figure.fieldSection {
+                  margin-left: 0 !important;
+                  margin-right: 0 !important;
+               }
+            }
+
+             .LiveField__error {
+              margin-top: -1px;
+            }
+
+             .Field {
+              padding-left: 0;
+            }
+
+             .fieldSection > div {
+              margin-left: -17px;
+              margin-right: -17px;
+              margin-top: -2px;
+              margin-bottom: -2px;
+              padding: 0 15px;
+              border-radius: 4px;
+              border: 2px solid transparent;
+              transition: border .2s;
+            }
+             .fieldSection > div:focus-within,  .fieldSection > div:hover {
+              border: 2px solid #b7e6d4;
+            }
+
+            .editor.editor--live .submit {
+              margin-top: 22px;
+            }
+          
+
+             .LiveField,  .Field {
+    font-family:  -apple-system, BlinkMacSystemFont, sans-serif;
+font-size: 18px;
+font-weight: 400 !important;
+  }
+
+            .submit {
+              font-family:  -apple-system, BlinkMacSystemFont, sans-serif;
+            }
